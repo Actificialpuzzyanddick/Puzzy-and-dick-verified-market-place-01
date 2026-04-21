@@ -152,6 +152,21 @@ function sendReceipt(){
   let lga=document.getElementById("lga").value;
   let phone=document.getElementById("phone").value;
 
+  let product = document.getElementById("productName").innerText;
+  let price = document.getElementById("productPrice").innerText;
+
+  let message = "NEW ORDER%0A%0A"
+    + "Product: " + product + "%0A"
+    + "Price: " + price + "%0A%0A"
+    + "Name: " + name + "%0A"
+    + "State: " + state + "%0A"
+    + "LGA: " + lga + "%0A"
+    + "Phone: " + phone + "%0A%0A"
+    + "I have made payment. Sending receipt now.";
+
+  window.open("https://wa.me/2347078293919?text=" + message, "_blank");
+  }
+
   alert("Order Sent!\nName: "+name+"\nState: "+state+"\nLGA: "+lga+"\nPhone: "+phone);
 }
 </script>
